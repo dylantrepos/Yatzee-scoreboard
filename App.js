@@ -4,6 +4,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { Home } from './views'
 import Game from './views/Game';
+import AddResult from './views/AddResult';
 
 export default function App() {
 
@@ -17,6 +18,7 @@ export default function App() {
           component={Home}
         />
         <Stack.Screen name="Game" component={Game} />
+        <Stack.Screen name="AddResult" component={AddResult} />
       </Stack.Navigator>
     </NavigationContainer>
   );

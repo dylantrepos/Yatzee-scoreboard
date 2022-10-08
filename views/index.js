@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Pressable, StyleSheet, TextInput, View } from 'react-native';
 import AddPlayer from '../components/form/AddPlayer';
 import Button from '../components/button/Button';
@@ -29,7 +29,9 @@ export const Home = ({ navigation }) => {
     const startGame = () => {
         let filteredList = [ ...playerList].filter((player) => player.name.trim().length > 0);
         filteredList = filteredList.map(player => new PlayerClass(player.name, player.id))
-        navigation.navigate('Game', { playerList: filteredList })
+        if(filteredList.length> 0) {
+            navigation.navigate('Game', { playerList: filteredList })
+        }
     }
 
     return (

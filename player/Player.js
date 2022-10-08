@@ -3,8 +3,10 @@ import possibilities from "../helpers/possibilities";
 class PlayerClass {
 
     board = possibilities;
-
-    score = 0;
+    scoreBoard = {
+        bonus: 0,
+        total: 0,
+    }
 
     constructor(name, id) {
         this.name = name;
@@ -16,7 +18,11 @@ class PlayerClass {
     };
 
     getName() {
-        return 'name is : ' + this.name;
+        return this.name;
+    };
+
+    getId() {
+        return this.id;
     };
 
     setScore(name, score) {

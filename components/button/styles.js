@@ -2,7 +2,7 @@ export default {
     // General
     button: {
         backgroundColor: 'blue',
-        paddingVertical: 10,
+        width: '80%',
         paddingHorizontal: 30,
         borderRadius: 150,
     },
