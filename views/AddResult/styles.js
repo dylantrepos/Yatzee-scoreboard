@@ -21,16 +21,16 @@ export default {
     },
     score: {
         backgroundColor: 'red',
-        flex: 1,
+        alignSelf: 'stretch',
     },
     dices: {
-        backgroundColor: 'yellow',
-        flex: 3,
+        backgroundColor: 'blue',
+        width: '100%',
     },
     lineThree: {
         flexDirection: 'row',
         width: '100%',
-        justifyContent: 'space-between',
+        justifyContent: 'center',
         padding: '3%',
         flexDirection: "row",
         flexWrap: "wrap",
@@ -42,6 +42,8 @@ export default {
         borderRadius: 10,
         width: 100,
         marginBottom: 20,
+        marginLeft: 5,
+        marginRight: 5,
     },
     buttonValid: {
         backgroundColor: 'orange',

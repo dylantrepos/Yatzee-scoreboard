@@ -1,5 +1,5 @@
 export default {
-    text: {
+    standard: {
         color: 'white',
         textAlign: 'center',
         fontSize: 20,

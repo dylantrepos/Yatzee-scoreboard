@@ -5,11 +5,19 @@ export default {
         paddingVertical: 10,
         borderRadius: 10,
         width: '30%',
+        justifyContent: 'center',
+        height: 70
+    },
+    buttonDark: {
+        backgroundColor: 'grey',
     },
     text: {
         fontSize: 20,
         color: 'white',
-        alignSelf: 'center'
+        alignSelf: 'center',
+    },
+    text_hint: {
+        fontSize: 14,
     },
     lineThree: {
         flexDirection: 'row',
@@ -33,4 +41,9 @@ export default {
         backgroundColor: 'green',
         borderRadius: 100,
     },
+    selected: {
+        border: 1,
+        borderColor: 'blue',
+        backgroundColor: 'blue',
+    }
 }

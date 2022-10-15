@@ -5,11 +5,11 @@ export default {
         fontSize: 20,
         padding: 0,
         margin: 0,
-        lineHeight: 50,
       },
       title: {
           fontSize: 24,
           fontWeight: '700',
+          marginBottom: 5,
       },
       subtitle: {
           marginTop: 10,

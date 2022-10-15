@@ -7,7 +7,7 @@ import styleSheet from '../styles/styles';
 import Text from '../components/text/Text';
 
 export const Home = ({ navigation }) => {
-    const [playerList, setPlayerList] = React.useState([{name: ""}]);
+    const [playerList, setPlayerList] = React.useState([{name: 'Dylan'}, {name: 'Gueno'}]);
 
     const handlePlayerChange = (e, index) => {
         const newPlayerList = [ ...playerList];
