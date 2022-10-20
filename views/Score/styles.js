@@ -107,7 +107,7 @@ export default {
     text: {
         color: 'white',
         textAlign: 'center',
-        fontSize: 20,
+        fontSize: 18,
     },
     text_name: {
         fontWeight: '700',

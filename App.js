@@ -6,6 +6,7 @@ import { Home } from './views'
 import Results from './views/Results/index'
 import Game from './views/Game';
 import AddResult from './views/AddResult';
+import Score from './views/Score';
 
 export default function App() {
 
@@ -22,6 +23,7 @@ export default function App() {
         <Stack.Screen name="Game" component={Game} />
         <Stack.Screen name="AddResult" component={AddResult} />
         <Stack.Screen name="Results" component={Results} />
+        <Stack.Screen name="Score" component={Score} />
       </Stack.Navigator>
     </NavigationContainer>
   );

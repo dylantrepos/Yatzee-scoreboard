@@ -1,10 +1,68 @@
 import { StyleSheet } from 'react-native';
-import form from './form';
-import module from './module';
-import text from './text';
 
 export default StyleSheet.create({
-    ...form,
-    ...module,
-    ...text,
+    containerBig: {
+        flex: 1,
+        backgroundColor: '#000000',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: 20,
+      },
+      container: {
+          height: '100%',
+          width: '100%',
+          flex: 1,
+          alignItems: 'center',
+          justifyContent: 'center',
+      },
+      header: {
+          height: '100%',
+          width: '100%',
+          flex: 1,
+          alignItems: 'center',
+          justifyContent: 'center',
+      },
+      standard: {
+        color: 'white',
+        textAlign: 'center',
+        fontSize: 20,
+      },
+      title: {
+          fontSize: 24,
+          fontWeight: '700',
+      },
+      subtitle: {
+          marginTop: 10,
+          marginBottom: 30,
+      },
+      
+      containerButton: {
+        padding: 30
+      },
+      containerButton_start: {
+      },
+      button: {
+        backgroundColor: 'blue',
+        paddingVertical: 10,
+        paddingHorizontal: 30,
+        borderRadius: 100,
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+      },
+      button_startGame: {
+        backgroundColor: 'green',
+        marginTop: 20,
+      },
+      text: {
+        color: 'white',
+        textAlign: 'center',
+        fontSize: 20,
+        padding: 0,
+        margin: 0,
+      },
+      text_button: {
+        marginLeft: 15,
+      }
+
 });

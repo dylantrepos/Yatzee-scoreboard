@@ -1,8 +1,7 @@
 import React from 'react';
 import { Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
-import { getClass } from '../../helpers/retreiveClasses';
-import styleSheet from '../../styles/styles';
 import Button from '../button/Button';
+import Icon from "react-native-vector-icons/FontAwesome5";
 
 const AddPlayer = ({index, player, handleRemovePlayer, handlePlayerChange}) => {
 
@@ -18,7 +17,7 @@ const AddPlayer = ({index, player, handleRemovePlayer, handlePlayerChange}) => {
                 action={() => handleRemovePlayer(index)}
                 classBtn={['removePlayer']}
             >
-                x
+                <Icon name="minus" size={20} color="white" />
             </Button>
         </View>
     );

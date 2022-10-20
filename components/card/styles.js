@@ -1,7 +1,7 @@
 export default {
     // General
     button: {
-        backgroundColor: 'orange',
+        backgroundColor: '#8a08ac',
         paddingVertical: 10,
         borderRadius: 10,
         width: '30%',
@@ -23,12 +23,12 @@ export default {
         flexDirection: 'row',
         width: '100%',
         justifyContent: 'space-between',
-        padding: '3%',
+        padding: '2%',
     },
     lineTwo: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        padding: '3%',
+        padding: '2%',
     },
     buttonTwo: {
         width: '48%',
@@ -41,9 +41,12 @@ export default {
         backgroundColor: 'green',
         borderRadius: 100,
     },
+    buttonKill: {
+        backgroundColor: '#bd6efbb8',
+    },
     selected: {
         border: 1,
-        borderColor: 'blue',
-        backgroundColor: 'blue',
+        borderColor: 'green',
+        backgroundColor: 'green',
     }
 }

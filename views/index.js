@@ -1,13 +1,14 @@
 import React from 'react'
-import { Pressable, StyleSheet, TextInput, View } from 'react-native';
+import { Pressable, StyleSheet, TextInput, View, Text } from 'react-native';
 import AddPlayer from '../components/form/AddPlayer';
 import Button from '../components/button/Button';
 import PlayerClass from '../player/Player';
 import styleSheet from '../styles/styles';
-import Text from '../components/text/Text';
+import Icon from "react-native-vector-icons/FontAwesome5";
+
 
 export const Home = ({ navigation }) => {
-    const [playerList, setPlayerList] = React.useState([{name: 'Dylan'}, {name: 'Gueno'}]);
+    const [playerList, setPlayerList] = React.useState([{name: 'Dylan'}, {name: 'Gueno'}, {name: 'Jeje'}]);
 
     const handlePlayerChange = (e, index) => {
         const newPlayerList = [ ...playerList];
@@ -37,8 +38,8 @@ export const Home = ({ navigation }) => {
     return (
         <View style={styles.containerBig}>
             <View style={styles.container}>
-                <Text classTxt={['title']}>Qui joue ce soir ?</Text>
-                <Text classTxt={['subtitle']}>Inscrivez les noms des jouers ci-dessous</Text>
+                <Text style={[styles.standard, styles.title]}>Qui joue ce soir ?</Text>
+                <Text style={[styles.standard, styles.subtitle]}>Inscrivez les noms des joueurs ci-dessous</Text>
                     {playerList.map((player, index) => (
                         <AddPlayer 
                             key={index} 
@@ -47,17 +48,17 @@ export const Home = ({ navigation }) => {
                             handlePlayerChange={handlePlayerChange} 
                             handleRemovePlayer={handleRemovePlayer}
                         />))}
-                    <Button 
-                        action={addNewPlayer}
-                        classBtn={['addPlayer']}
-                        classTxt={['text']}
-                    >
-                        Ajouter un joueur
-                    </Button>
-                    <Button 
-                        action={startGame}
-                        classBtn={['startGame']}
-                    >Démarrer</Button>
+                    <View style={styles.containerButton}>
+                        <Pressable style={[styles.button]} onPress={addNewPlayer}>
+                        <Icon name="user-astronaut" size={20} color="#A6A6A6" />
+                            <Text style={[styles.text, styles.text_button]}>Ajouter un joueur</Text>
+                        </Pressable>
+                    </View>
+                    <View style={[styles.containerButton, styles.containerButton_start]}>
+                        <Pressable style={[styles.button, styles.button_startGame]} onPress={startGame}>
+                            <Text style={[styles.text]}>Démarrer</Text>
+                        </Pressable>
+                    </View>
             </View>
         </View>
     )

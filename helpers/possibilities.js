@@ -56,27 +56,22 @@ export default [
     },
     {
         id: 12,
-        name: '6',
-        score: 0
-    },
-    {
-        id: 13,
         name: 'Petite suite',
         score: 0
     },
     {
-        id: 14,
+        id: 13,
         name: 'Grande suite',
         score: 0
     },
     {
         id: 15,
-        name: 'Chance',
-        score: 0
-    },
-    {
-        id: 16,
         name: 'Yathzee',
         score: 0
     },
+    {
+        id: 14,
+        name: 'Chance',
+        score: 0
+    }
 ]

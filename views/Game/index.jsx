@@ -3,6 +3,7 @@ import { Button, Pressable, ScrollView, StyleSheet, TextInput, View, Text } from
 import {DeviceEventEmitter} from "react-native"
 import Card from '../../components/card/Card';
 import { checkResults } from '../../helpers/checkResult';
+import Icon from "react-native-vector-icons/FontAwesome5";
 // import Text from '../../components/text/Text';
 import stylesSheet from './styles';
 
@@ -66,10 +67,12 @@ const Game = ({ navigation, route }) => {
     }
 
     const validResult = () => {
+        console.log('bef : ', currentPlayer)
         currentPlayer.setScore(hasSelected.id, hasSelected.total);
         currentPlayer.setTotal(hasSelected.total);
         if (hasSelected.id >= 1 && hasSelected.id <= 6) currentPlayer.setBonus(hasSelected.total);
         nextPlayer();
+        console.log('after : ', currentPlayer)
     }
 
     return ( 
@@ -82,10 +85,11 @@ const Game = ({ navigation, route }) => {
                 <Text style={[styles.text, styles.text_subtitle]}>Il te reste à faire </Text>
                 <Card player={currentPlayer} possibilities={possibilities} step={step}/>
             </View>
-            <View style={styles.containerButton}>
+            <View style={[styles.containerButton, , styles.button_addResults]}>
                     {hasSelected.id != 0 && step == 1 ? 
-                        <Pressable style={[styles.button]} onPress={validResult}>
-                            <Text style={[styles.text, styles.text_button]}>Valider</Text>
+                        <Pressable style={[styles.button, styles.button_valid]} onPress={validResult}>
+                            <Icon name="check" size={20} color="white" />
+                            <Text style={[styles.text, styles.text_button, styles.text_buttonValid]}>Valider</Text>
                         </Pressable> : ''
                     }
                     {step == 0 ? 

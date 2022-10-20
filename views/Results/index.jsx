@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Text } from 'react-native';
+import { Pressable, Text } from 'react-native';
 import { View } from 'react-native';
 import stylesSheet from './styles';
 
@@ -15,6 +15,12 @@ export default Results = ({ navigation, route }) => {
         if (index == 1) return [styles.scoreBoard, styles.SecondPos];
         if (index == 2) return [styles.scoreBoard, styles.ThirdPos];
         else return [styles.scoreBoard];
+    }
+
+    const checkScore = () => {
+        navigation.navigate('Score', {
+            playerListEl: playerList, 
+        })
     }
 
     return ( 
@@ -54,6 +60,11 @@ export default Results = ({ navigation, route }) => {
                             <Text style={[styles.text, styles.text_score]}> {player.scoreBoard.total} pts</Text>
                         </View>) : ''
                 }) : ''}
+                <View style={styles.containerButton}>
+                        <Pressable style={[styles.button]} onPress={checkScore}>
+                            <Text style={[styles.text, styles.text_button]}>Voir les scores</Text>
+                        </Pressable>
+                </View>
             </View>
         </View>
     )
