@@ -31,6 +31,17 @@ export default StyleSheet.create({
           fontSize: 24,
           fontWeight: '700',
       },
+      title_yatzhee: {
+          color: 'black',
+          fontSize: 34,
+          fontWeight: '700',
+          borderWidth: 1,
+          borderColor: 'white',
+          borderRadius: 10,
+          marginBottom: 50,
+          padding: 30,
+          backgroundColor: 'white',
+      },
       subtitle: {
           marginTop: 10,
           marginBottom: 30,

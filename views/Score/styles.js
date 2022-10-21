@@ -14,20 +14,17 @@ export default {
         width: '100%',
         height: '100%',
         flex: 1,
-        backgroundColor: 'green',
         padding: 0,
         margin: 0,
     },
     header: {   
         width: '100%',
-        backgroundColor: 'green',
-        paddingTop: 20,
-        paddingBottom: 20,
+        paddingTop: 50,
+        paddingBottom: 50,
         paddingLeft: 10,
-        alignItems: 'flex-start',
+        alignItems: 'center',
     },
     body: {
-        backgroundColor: 'red',
         flex: 3,
     },
     containerButton: {
@@ -42,65 +39,17 @@ export default {
         justifyContent: 'center',
         height: 100
     },
-    firstPos: {
-        width: '100%',
-        backgroundColor: '#ffe029',
-    },
-    SecondPos: {
-        width: '100%',
-        backgroundColor: '#8c9ba0',
-    },
-    ThirdPos: {
-        width: '100%',
-        backgroundColor: '#aa4a1e',
-    },
-    podium_container: {
-        backgroundColor: 'blue',
-        height: 250,
-        width: '100%',
-        flexDirection: 'row',
-        justifyContent: 'center',
-    },
-    podium_stand: {
-        width: '30%',
-        margin: 5,
-        justifyContent: 'flex-end',
-        alignItems: 'center',
-    },
-    podium_content: {
-        width: '100%',
-        alignItems: 'center',
-        marginTop: 10,
-        borderRadius: 5,
-    },
-    podium_second: {
-        backgroundColor: '#8c9ba0',
-        height: '45%',
-    },
-    podium_first: {
-        backgroundColor: '#ffe029',
-        height: '60%',
-    },
-    podium_third: {
-        backgroundColor: '#aa4a1e',
-        height: '35%',
-    },
-    podium_number: {
-        fontSize: 30,
-        marginTop: 10,
-    },
-    podium_text: {
-        color: 'white',
-    },
 
 
     // Button
     button: {
-        borderRadius: 10,
-        width: '70%',
+        borderRadius: 100,
+        paddingVertical: 10,
+        paddingHorizontal: 80, 
         alignSelf: 'center',
         backgroundColor: 'green',
         padding: 5,
+        marginTop: 30,
     },
 
     // Text
@@ -116,5 +65,12 @@ export default {
     },
     text_score: {
         fontSize: 20,
+    },
+    text_bestScore: {
+        color: '#e1e544',
+        fontWeight: '700',
+    },
+    text_titleScore: {
+        fontWeight: '700',
     },
 }

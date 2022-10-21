@@ -6,7 +6,7 @@ export default {
         borderRadius: 10,
         width: '30%',
         justifyContent: 'center',
-        height: 70
+        height: 60,
     },
     buttonDark: {
         backgroundColor: 'grey',

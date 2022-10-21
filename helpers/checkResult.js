@@ -2,6 +2,9 @@ export const checkResults = (resultsPlayer) => {
     const numbers = [1, 2, 3, 4, 5, 6];
     const posibilities = [];
     const totalDices = resultsPlayer.reduce((a, b) => a + b);
+    let isDbPair = false;
+    let isPair = false;
+    console.log('ici : ', [...new Set(resultsPlayer)])
 
     numbers.forEach(number => {
         if (resultsPlayer.includes(number)) {
@@ -22,7 +25,16 @@ export const checkResults = (resultsPlayer) => {
                         id: 7,
                         total: totalDices,
                     })
-                } 
+                }
+                if (isPair && !posibilities.find(elt => elt.id == 8)) {
+                    posibilities.push({
+                        name: 'Double pair',
+                        id: 8,
+                        total: totalDices,
+                    })
+                    isDbPair = true;
+                }
+                isPair = true;
             }
             
             // Check Brelan
@@ -40,15 +52,15 @@ export const checkResults = (resultsPlayer) => {
                     name: 'Carré',
                     id: 10,
                     total: totalDices,
-                }, {
+                })
+                posibilities.push({
                     name: 'Double pair',
                     id: 8,
                     total: totalDices,
                 })
             }
             
-            // Check Full
-            if (posibilities.find(elt => elt.id == 7) && posibilities.find(elt => elt.id == 9)) {
+            if (([...new Set(resultsPlayer)].length == 2) && isDbPair ) {
                 posibilities.push({
                     name: 'Full',
                     id: 11,

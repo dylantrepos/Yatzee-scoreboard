@@ -14,21 +14,18 @@ export default {
         width: '100%',
         height: '100%',
         flex: 1,
-        backgroundColor: 'green',
         padding: 0,
         margin: 0,
     },
     header: {   
         width: '100%',
-        backgroundColor: 'green',
         paddingTop: 20,
         paddingBottom: 20,
         paddingLeft: 10,
         alignItems: 'flex-start',
     },
     body: {
-        backgroundColor: 'red',
-        flex: 3,
+        flex: 1,
     },
     containerButton: {
         width: '100%',
@@ -55,7 +52,6 @@ export default {
         backgroundColor: '#aa4a1e',
     },
     podium_container: {
-        backgroundColor: 'blue',
         height: 250,
         width: '100%',
         flexDirection: 'row',
@@ -96,8 +92,10 @@ export default {
 
     // Button
     button: {
-        borderRadius: 10,
-        width: '70%',
+        borderRadius: 100,
+        paddingVertical: 10,
+        paddingHorizontal: 80,
+        marginTop: 30, 
         alignSelf: 'center',
         backgroundColor: 'green',
         padding: 5,

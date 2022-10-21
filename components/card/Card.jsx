@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Pressable, ScrollView, View, Text, DeviceEventEmitter} from 'react-native';
 import styleSheet from './styles';
-import Icon from "react-native-vector-icons/FontAwesome5";
+
 
 const Card = ({ action, navigation, player, possibilities, step}) => {
 

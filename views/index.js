@@ -38,6 +38,7 @@ export const Home = ({ navigation }) => {
     return (
         <View style={styles.containerBig}>
             <View style={styles.container}>
+            <Text style={[styles.standard, styles.title_yatzhee]}>Yatzhee</Text>
                 <Text style={[styles.standard, styles.title]}>Qui joue ce soir ?</Text>
                 <Text style={[styles.standard, styles.subtitle]}>Inscrivez les noms des joueurs ci-dessous</Text>
                     {playerList.map((player, index) => (

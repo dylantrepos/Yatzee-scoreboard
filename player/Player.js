@@ -112,15 +112,11 @@ class PlayerClass {
 
     setTotal(total) {
         this.scoreBoard.total += total;
-        if(this.scoreBoard.bonus == 0 && (this.board[1].score + this.board[2].score + this.board[3].score + this.board[4].score + this.board[5].score + this.board[6].score) > 63){
+        console.log('total cal : ', this.name, this.board[1].score + this.board[2].score + this.board[3].score + this.board[4].score + this.board[5].score + this.board[6].score)
+        if((this.scoreBoard.bonus == 0) && (this.board[0].score + this.board[1].score + this.board[2].score + this.board[3].score + this.board[4].score + this.board[5].score) > 63){
             this.scoreBoard.bonus += 35
             this.scoreBoard.total += 35
         };
-    }
-
-    setBonus() {
-        console.log('coucou')
-        if ((this.board[1].score + this.board[2].score + this.board[3].score + this.board[4].score + this.board[5].score + this.board[6].score) > 63) this.scoreBoard.bonus += 35;
     }
 
     checkOne(results) {

@@ -6,6 +6,7 @@ import { checkResults } from '../../helpers/checkResult';
 import Icon from "react-native-vector-icons/FontAwesome5";
 // import Text from '../../components/text/Text';
 import stylesSheet from './styles';
+import getIcon from '../../helpers/getIconDice';
 
 const Game = ({ navigation, route }) => {
 
@@ -19,7 +20,7 @@ const Game = ({ navigation, route }) => {
     const numberPlayer = playerListEl.length;
     let possibilities = null;
 
-    if (turn == 2) {
+    if (turn == 16) {
         navigation.navigate('Results', {
             playerList: playerListEl
         })
@@ -70,7 +71,7 @@ const Game = ({ navigation, route }) => {
         console.log('bef : ', currentPlayer)
         currentPlayer.setScore(hasSelected.id, hasSelected.total);
         currentPlayer.setTotal(hasSelected.total);
-        if (hasSelected.id >= 1 && hasSelected.id <= 6) currentPlayer.setBonus(hasSelected.total);
+        if (hasSelected.id >= 1 && hasSelected.id <= 6);
         nextPlayer();
         console.log('after : ', currentPlayer)
     }
@@ -79,7 +80,9 @@ const Game = ({ navigation, route }) => {
         <View style={styles.containerBig}>
             <View style={[styles.header]}>
                 <Text style={[styles.text, styles.text_name]} >{currentPlayer.name} Tour {turn}</Text>
-               {results && step == 1 ? <Text style={[styles.text, styles.text_turn]}>{results.join(' ')}</Text> : ''}
+               <Pressable style={[styles.dicesContainer]} onPress={addResults}>
+                {results && step == 1 ? results.map((result, index) => <Icon key={index} name={getIcon(result)} size={40} color="black" style={styles.dices}/>) : ''}
+               </Pressable>
             </View>
             <View style={[styles.container, styles.body]}>
                 <Text style={[styles.text, styles.text_subtitle]}>Il te reste à faire </Text>
@@ -93,8 +96,9 @@ const Game = ({ navigation, route }) => {
                         </Pressable> : ''
                     }
                     {step == 0 ? 
-                        <Pressable style={[styles.button]} onPress={addResults}>
-                            <Text style={[styles.text, styles.text_button]}>Ajouter le résultat</Text>
+                        <Pressable style={[styles.button, styles.button_results]} onPress={addResults}>
+                             <Icon name="dice" size={20} color="white" />
+                            <Text style={[styles.text, styles.text_button, styles.text_buttonResult]}>Ajouter le résultat</Text>
                         </Pressable> : ''
                     }
             </View>

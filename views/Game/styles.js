@@ -39,6 +39,10 @@ export default {
         margin: 10,
         flex: .2,
     },
+    dicesContainer: {
+        flexDirection: 'row',
+        gap: 5,
+    },
 
     // Button
     button: {
@@ -55,8 +59,18 @@ export default {
         justifyContent: 'center',
         alignItems: 'center',
     },
+    button_results: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    dices: {
+        marginHorizontal: 5,
+    },
 
-
+    /**
+     * ! boucle infini ?
+     */
     // Text
     text: {
         color: 'white',
@@ -66,7 +80,7 @@ export default {
     text_name: {
         fontWeight: '700',
         fontSize: 20,
-        marginBottom: 10,
+        marginBottom: 5,
         color: 'black',
     },
     text_turn: {
@@ -74,5 +88,11 @@ export default {
     },
     text_buttonValid: {
         marginLeft: 10,
+    },
+    text_buttonResult: {
+        marginLeft: 10,
+    },
+    text_subtitle: {
+        marginBottom: 10,
     },
 }
