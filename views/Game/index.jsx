@@ -20,7 +20,7 @@ const Game = ({ navigation, route }) => {
     const numberPlayer = playerListEl.length;
     let possibilities = null;
 
-    if (turn == 16) {
+    if (turn == 2) {
         navigation.navigate('Results', {
             playerList: playerListEl
         })

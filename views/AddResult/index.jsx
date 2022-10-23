@@ -57,7 +57,7 @@ const AddResult = ({ navigation, route }) => {
     <View style={styles.containerBig}>
             <View style={[styles.container, styles.header]}>
                 <Text style={[styles.text, styles.title]} >{player.name}</Text>
-                <Text style={[styles.text, styles.turn]}>Turn {turn}</Text>
+                <Text style={[styles.text, styles.turn]}>Tour {turn}</Text>
             </View>
             <View style={[styles.score]}>
                 <Text style={[styles.text, styles.textToDo]}>Résultat du lancé </Text>

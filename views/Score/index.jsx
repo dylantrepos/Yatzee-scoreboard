@@ -23,9 +23,9 @@ export default Score = ({ navigation, route }) => {
         [<Text style={[styles.text, styles.text_titleScore]}>Full</Text>], 
         [<Text style={[styles.text, styles.text_titleScore]}>Sm suite</Text>], 
         [<Text style={[styles.text, styles.text_titleScore]}>Lg suite</Text>], 
-        [<Text style={[styles.text, styles.text_titleScore]}>chance</Text>], 
         [<Text style={[styles.text, styles.text_titleScore]}>yathzee</Text>], 
-        [<Text style={[styles.text, styles.text_titleScore]}>total</Text>]
+        [<Text style={[styles.text, styles.text_titleScore]}>chance</Text>], 
+        [<Text style={[styles.text, styles.text_titleScore]}>total</Text>],
     ];
 
     playerListEl.forEach(player => {
@@ -48,6 +48,8 @@ export default Score = ({ navigation, route }) => {
             const name = elt[0];
             let newElt = [...elt];
             newElt.shift();
+            console.log('test : ', newElt)
+            console.log('test Max : ', Math.max(...newElt))
             newElt = [...newElt].map(number => number === Math.max(...newElt) ? <Text style={[styles.text, styles.text_bestScore]}>{number}</Text> : number);
             return [name, ...newElt]
         })

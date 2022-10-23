@@ -26,7 +26,7 @@ export default Results = ({ navigation, route }) => {
     return ( 
         <View style={styles.containerBig}>
             <View style={[styles.header]}>
-                <Text style={[styles.text, styles.text_name]} >Résultat...</Text>
+                <Text style={[styles.text, styles.text_name]}>Résultat...</Text>
             </View>
             <View style={[styles.container, styles.body]}>
                 <View style={[styles.podium_container]}>
