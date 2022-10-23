@@ -4,7 +4,6 @@ export const checkResults = (resultsPlayer) => {
     const totalDices = resultsPlayer.reduce((a, b) => a + b);
     let isDbPair = false;
     let isPair = false;
-    console.log('ici : ', [...new Set(resultsPlayer)])
 
     numbers.forEach(number => {
         if (resultsPlayer.includes(number)) {

@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Pressable, Text } from 'react-native';
-import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
+import { Table, Row, Rows } from 'react-native-table-component';
 import { View } from 'react-native';
 import stylesSheet from './styles';
 import resultNames from '../../helpers/resultNames';
@@ -27,10 +27,12 @@ export default Score = ({ navigation, route }) => {
                 tableData[i].push(player.board[i].score === 0 ? 'X' : player.board[i].score)
             }
         }
+        
         tableData = [...tableData].map( elt => {
             const name = elt[0];
             let newElt = [...elt];
             newElt.shift();
+
             if (newElt.length > 2) {
                 newElt = [...newElt].map(elt => elt == "X" ? 0 : elt)
                 newElt = [...newElt].map(number => number === Math.max(...newElt) && number !== 0 ? <Text style={[styles.text, styles.text_bestScore]}>{number}</Text> : number)
@@ -40,9 +42,7 @@ export default Score = ({ navigation, route }) => {
         })
     })
 
-    const playAgain = () => {
-        navigation.navigate('Home');
-    }
+    const playAgain = () => navigation.navigate('Home');
 
 
     return ( 

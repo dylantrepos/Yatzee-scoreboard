@@ -73,7 +73,7 @@ const Game = ({ navigation, route }) => {
         currentPlayer.setTotal(hasSelected.total);
         if (hasSelected.id >= 1 && hasSelected.id <= 6);
         nextPlayer();
-        console.log('after : ', currentPlayer)
+        console.log('//after : ', currentPlayer)
     }
 
     return ( 

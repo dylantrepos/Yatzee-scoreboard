@@ -1,4 +1,4 @@
-export default [
+export default getPossibilities = () => [
     {
         id: 1,
         name: '1',

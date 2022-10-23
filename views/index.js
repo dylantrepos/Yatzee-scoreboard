@@ -1,7 +1,6 @@
 import React from 'react'
 import { Pressable, StyleSheet, TextInput, View, Text } from 'react-native';
 import AddPlayer from '../components/form/AddPlayer';
-import Button from '../components/button/Button';
 import PlayerClass from '../player/Player';
 import styleSheet from '../styles/styles';
 import Icon from "react-native-vector-icons/FontAwesome5";
