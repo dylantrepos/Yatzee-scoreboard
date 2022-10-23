@@ -3,30 +3,13 @@ import { Pressable, Text } from 'react-native';
 import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
 import { View } from 'react-native';
 import stylesSheet from './styles';
+import resultNames from '../../helpers/resultNames';
 
 export default Score = ({ navigation, route }) => {
 
     const { playerListEl } = route.params;
     const tableHead = [''];
-    let tableData = [
-        [<Text style={[styles.text, styles.text_titleScore]}>1</Text>], 
-        [<Text style={[styles.text, styles.text_titleScore]}>2</Text>], 
-        [<Text style={[styles.text, styles.text_titleScore]}>3</Text>], 
-        [<Text style={[styles.text, styles.text_titleScore]}>4</Text>], 
-        [<Text style={[styles.text, styles.text_titleScore]}>5</Text>], 
-        [<Text style={[styles.text, styles.text_titleScore]}>6</Text>],
-        [<Text style={[styles.text, styles.text_titleScore]}>bonus</Text>], 
-        [<Text style={[styles.text, styles.text_titleScore]}>pair</Text>], 
-        [<Text style={[styles.text, styles.text_titleScore]}>2x pair</Text>], 
-        [<Text style={[styles.text, styles.text_titleScore]}>Brelan</Text>], 
-        [<Text style={[styles.text, styles.text_titleScore]}>Carré</Text>], 
-        [<Text style={[styles.text, styles.text_titleScore]}>Full</Text>], 
-        [<Text style={[styles.text, styles.text_titleScore]}>Sm suite</Text>], 
-        [<Text style={[styles.text, styles.text_titleScore]}>Lg suite</Text>], 
-        [<Text style={[styles.text, styles.text_titleScore]}>yathzee</Text>], 
-        [<Text style={[styles.text, styles.text_titleScore]}>chance</Text>], 
-        [<Text style={[styles.text, styles.text_titleScore]}>total</Text>],
-    ];
+    let tableData = resultNames.map(elt => [<Text style={[styles.text, styles.text_titleScore]}>{elt}</Text>])
 
     playerListEl.forEach(player => {
         tableHead.push(<Text style={[styles.text, styles.text_titleScore]}>{player.name}</Text>);
@@ -44,20 +27,21 @@ export default Score = ({ navigation, route }) => {
                 tableData[i].push(player.board[i].score === 0 ? 'X' : player.board[i].score)
             }
         }
-        tableData = [...tableData].map(elt => {
+        tableData = [...tableData].map( elt => {
             const name = elt[0];
             let newElt = [...elt];
             newElt.shift();
-            console.log('test : ', newElt)
-            console.log('test Max : ', Math.max(...newElt))
-            newElt = [...newElt].map(number => number === Math.max(...newElt) ? <Text style={[styles.text, styles.text_bestScore]}>{number}</Text> : number);
+            if (newElt.length > 2) {
+                newElt = [...newElt].map(elt => elt == "X" ? 0 : elt)
+                newElt = [...newElt].map(number => number === Math.max(...newElt) && number !== 0 ? <Text style={[styles.text, styles.text_bestScore]}>{number}</Text> : number)
+                newElt = [...newElt].map(elt => elt == 0 ? "X" : elt)
+            };
             return [name, ...newElt]
         })
     })
 
     const playAgain = () => {
-        navigation.navigate('Home', {
-        })
+        navigation.navigate('Home');
     }
 
 
