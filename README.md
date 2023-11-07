@@ -12,3 +12,6 @@ This is a mobile app scoreboard for Yatzee game. It was made with React-Native t
 
 ### Round (Select dices)
 <img width="389" alt="Capture d’écran 2023-11-07 à 16 52 52" src="https://github.com/dylantrepos/Yatzee-scoreboard/assets/60279661/cb667635-9311-492f-b323-4ed4e164a77c">
+
+### Round (Choose best combinaison)
+<img width="389" alt="Capture d’écran 2023-11-07 à 16 53 41" src="https://github.com/dylantrepos/Yatzee-scoreboard/assets/60279661/bf87ebd8-d1aa-415e-8397-ab70d381ac9e">
