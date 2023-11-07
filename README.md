@@ -5,4 +5,10 @@ This is a mobile app scoreboard for Yatzee game. It was made with React-Native t
 ## Images
 
 ### Home 
-![image](https://github.com/dylantrepos/Yatzee-scoreboard/assets/60279661/0b0d32eb-cfb2-463a-a55f-6ab1d88d2c4c)
+<img width="389" alt="Capture d’écran 2023-11-07 à 16 51 42" src="https://github.com/dylantrepos/Yatzee-scoreboard/assets/60279661/f77139f8-f3cb-4fcc-a72f-713b519aad60">
+
+### Round (Scoreboard)
+<img width="389" alt="Capture d’écran 2023-11-07 à 16 52 07" src="https://github.com/dylantrepos/Yatzee-scoreboard/assets/60279661/bbe5c113-9951-4b5c-871f-5809ad778ef3">
+
+### Round (Select dices)
+<img width="389" alt="Capture d’écran 2023-11-07 à 16 52 52" src="https://github.com/dylantrepos/Yatzee-scoreboard/assets/60279661/cb667635-9311-492f-b323-4ed4e164a77c">
